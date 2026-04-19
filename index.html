@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks Reserve Home</title>
+    <meta
+      name="description"
+      content="A clean Starbucks-inspired homepage focused on browsing drinks and moving customers into a dedicated order page."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <div class="container nav-bar">
+          <a class="brand" href="#top" aria-label="Starbucks homepage">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="Logo.png" alt="" />
+            </span>
+            <span class="brand-copy">
+              <strong>Starbucks</strong>
+              <span>Reserve home</span>
+            </span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+            <a href="#menu">Menu</a>
+            <a href="#pickup">Pickup</a>
+            <a href="order.html">Order now</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="utility-link" href="#pickup">How it works</a>
+            <a class="button button-secondary" href="order.html">Order now</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-section">
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Reserve ordering</p>
+              <h1>Signature drinks, clearer browsing, and one easy path to order.</h1>
+              <p class="hero-text">
+                Browse the menu, understand the pickup flow, and move into the
+                order builder only when you are ready to customize.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="order.html">Start order</a>
+                <a class="button button-ghost" href="#menu">See menu</a>
+              </div>
+              <div class="hero-highlights">
+                <article>
+                  <span>Browse cleanly</span>
+                  <p>The homepage keeps the menu readable and leaves detailed selections for later.</p>
+                </article>
+                <article>
+                  <span>Clear next step</span>
+                  <p>Each main action leads directly into the dedicated order builder.</p>
+                </article>
+                <article>
+                  <span>Pickup ready</span>
+                  <p>Customers understand the flow before they ever reach checkout.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="hero-stage reveal">
+              <div class="hero-stage-card">
+                <p class="eyebrow">Storefront layout</p>
+                <h2>A calmer front page with room for the menu to lead.</h2>
+                <p class="stage-text">
+                  The homepage is designed to feel closer to an in-store menu
+                  board: clear, spacious, and focused on discovery.
+                </p>
+                <ul class="hero-stage-list">
+                  <li>Featured drinks are easier to compare</li>
+                  <li>Pickup expectations stay visible</li>
+                  <li>Customization begins only when the customer is ready</li>
+                </ul>
+              </div>
+
+              <div class="hero-note-grid">
+                <article class="mini-panel">
+                  <span class="mini-panel-label">Menu</span>
+                  <strong>Scan the signatures quickly</strong>
+                  <p>Large cards and lighter framing make the drink list easier to read.</p>
+                </article>
+                <article class="mini-panel">
+                  <span class="mini-panel-label">Ordering</span>
+                  <strong>Move to customization when ready</strong>
+                  <p>The builder, pricing, and final confirmation live on the dedicated order page.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="pickup-section" id="menu">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Featured menu</p>
+              <h2>Signature drinks arranged like a cleaner reserve menu board.</h2>
+            </div>
+
+            <div class="menu-grid">
+              <article class="menu-card reveal">
+                <div class="menu-card-top">
+                  <span>01</span>
+                  <strong>From $6.40</strong>
+                </div>
+                <h3>Velvet Oat Shaken Espresso</h3>
+                <p>
+                  Blonde espresso, brown sugar, oat milk, and a soft cinnamon
+                  finish.
+                </p>
+              </article>
+              <article class="menu-card reveal">
+                <div class="menu-card-top">
+                  <span>02</span>
+                  <strong>From $6.85</strong>
+                </div>
+                <h3>Pistachio Cream Cold Brew</h3>
+                <p>
+                  Cold brew with pistachio cream and vanilla notes for a richer
+                  iced option.
+                </p>
+              </article>
+              <article class="menu-card reveal">
+                <div class="menu-card-top">
+                  <span>03</span>
+                  <strong>From $5.95</strong>
+                </div>
+                <h3>Matcha Cloud Latte</h3>
+                <p>
+                  Bright matcha, your milk of choice, and a lighter sweet cream
+                  top.
+                </p>
+              </article>
+              <article class="menu-card reveal">
+                <div class="menu-card-top">
+                  <span>04</span>
+                  <strong>From $6.65</strong>
+                </div>
+                <h3>Reserve Dark Mocha</h3>
+                <p>
+                  Deep roast mocha with cocoa notes for customers who want
+                  something warmer and fuller.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="order-section" id="pickup">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Pickup flow</p>
+              <h2>From browsing to order confirmation, the path stays simple.</h2>
+              <p>
+                Customers browse the drinks here, then move into the dedicated
+                builder for size, extras, pickup, and confirmation.
+              </p>
+            </div>
+
+            <div class="flow-grid">
+              <article class="flow-card reveal">
+                <span>01</span>
+                <h3>Browse featured drinks</h3>
+                <p>Use the homepage to compare drinks without exposing order-ticket details.</p>
+              </article>
+              <article class="flow-card reveal">
+                <span>02</span>
+                <h3>Open the order page</h3>
+                <p>Customers move into a dedicated builder when they are ready to customize.</p>
+              </article>
+              <article class="flow-card reveal">
+                <span>03</span>
+                <h3>Confirm pickup clearly</h3>
+                <p>The order page handles the summary, pricing, and confirmation state.</p>
+              </article>
+            </div>
+
+            <div class="support-card reveal">
+              <div>
+                <p class="eyebrow">Ready to order</p>
+                <h3>Browse the menu here, then move into a focused ordering flow.</h3>
+                <p>
+                  Drink details, pricing, and confirmation stay inside the order
+                  page so the homepage remains calm and easy to scan.
+                </p>
+              </div>
+              <div class="hero-actions compact-actions">
+                <a class="button button-primary" href="order.html">Go to order page</a>
+                <a class="button button-ghost" href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <div>
+            <h4>Browse</h4>
+            <a href="#menu">Featured menu</a>
+            <a href="#pickup">Pickup flow</a>
+            <a href="order.html">Order page</a>
+          </div>
+          <div>
+            <h4>Order</h4>
+            <a href="order.html#order">Build a drink</a>
+            <a href="order.html#pickup">Pickup details</a>
+            <a href="order.html#footer">Support</a>
+          </div>
+          <div>
+            <h4>About</h4>
+            <a href="#top">Storefront layout</a>
+            <a href="#top">Clean homepage flow</a>
+            <a href="#top">Cafe inspiration</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <p>Starbucks-inspired demo homepage with a dedicated order route.</p>
+          <p>Built with HTML, CSS, and vanilla JavaScript.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks Order Now</title>
+    <meta
+      name="description"
+      content="A cleaner Starbucks-inspired order page with a focused drink builder and live order summary."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <div class="container nav-bar">
+          <a class="brand" href="index.html" aria-label="Starbucks homepage">
+            <span class="brand-mark" aria-hidden="true">
+              <img src="Logo.png" alt="" />
+            </span>
+            <span class="brand-copy">
+              <strong>Starbucks</strong>
+              <span>Reserve order desk</span>
+            </span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="#order">Order</a>
+            <a href="#pickup">Pickup</a>
+          </nav>
+
+          <div class="nav-actions">
+            <a class="utility-link" href="index.html#menu">See menu</a>
+            <a class="button button-secondary" href="index.html">Back home</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-section">
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Order now</p>
+              <h1>A clearer ordering desk for quick custom drinks.</h1>
+              <p class="hero-text">
+                Choose the drink, adjust the options, set pickup, and review the
+                live ticket without extra distractions.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#order">Build order</a>
+                <a class="button button-ghost" href="index.html">Back to home</a>
+              </div>
+              <div class="hero-highlights">
+                <article>
+                  <span>Focused builder</span>
+                  <p>The page keeps drink selection and customization close together.</p>
+                </article>
+                <article>
+                  <span>Pickup clarity</span>
+                  <p>Timing and handoff stay visible while the order changes.</p>
+                </article>
+                <article>
+                  <span>Live total</span>
+                  <p>The summary refreshes immediately with every edit.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="hero-stage reveal">
+              <div class="hero-stage-card">
+                <p class="eyebrow">Reserve counter</p>
+                <h2>Choose the drink, adjust the details, and review the ticket in one clean flow.</h2>
+                <p class="stage-text">
+                  The builder and summary stay side by side so customers can
+                  change options without losing context.
+                </p>
+                <ul class="hero-stage-list">
+                  <li>Start with a signature base</li>
+                  <li>Tune size, milk, extras, and pickup</li>
+                  <li>Confirm with a readable total and pickup status</li>
+                </ul>
+              </div>
+
+              <div class="hero-note-grid">
+                <article class="mini-panel">
+                  <span class="mini-panel-label">Summary</span>
+                  <strong>Updates on every change</strong>
+                  <p>Totals and pickup timing refresh immediately as the selections change.</p>
+                </article>
+                <article class="mini-panel">
+                  <span class="mini-panel-label">Confirmation</span>
+                  <strong>Readable after submit</strong>
+                  <p>The order number and pickup status stay visible after placement.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="order-section" id="order">
+          <div class="container order-layout">
+            <div class="order-builder reveal">
+              <div class="section-heading order-heading">
+                <p class="eyebrow">Build your drink</p>
+                <h2>Start with the base drink, then refine the details.</h2>
+                <p>
+                  Every selection updates the order summary instantly, so the
+                  final ticket stays clear before submission.
+                </p>
+              </div>
+
+              <div class="drink-selector" aria-label="Signature drinks">
+                <button
+                  class="drink-option is-active"
+                  type="button"
+                  data-drink="velvet-oat"
+                >
+                  <span class="drink-option-top">Signature 01</span>
+                  <strong>Velvet Oat Shaken Espresso</strong>
+                  <p>Brown sugar, blonde espresso, oat milk, soft cinnamon.</p>
+                  <span class="drink-option-price">from $6.40</span>
+                </button>
+                <button class="drink-option" type="button" data-drink="pistachio-coldbrew">
+                  <span class="drink-option-top">Signature 02</span>
+                  <strong>Pistachio Cream Cold Brew</strong>
+                  <p>Cold brew base, pistachio cream, vanilla foam finish.</p>
+                  <span class="drink-option-price">from $6.85</span>
+                </button>
+                <button class="drink-option" type="button" data-drink="matcha-cloud">
+                  <span class="drink-option-top">Signature 03</span>
+                  <strong>Matcha Cloud Latte</strong>
+                  <p>Bright matcha, milk of choice, airy sweet cream top.</p>
+                  <span class="drink-option-price">from $5.95</span>
+                </button>
+                <button class="drink-option" type="button" data-drink="reserve-mocha">
+                  <span class="drink-option-top">Signature 04</span>
+                  <strong>Reserve Dark Mocha</strong>
+                  <p>Deep roast mocha, bittersweet cocoa, velvet texture.</p>
+                  <span class="drink-option-price">from $6.65</span>
+                </button>
+              </div>
+
+              <form class="order-form" id="order-form">
+                <input type="hidden" name="drink" id="selected-drink" value="velvet-oat" />
+
+                <fieldset class="option-group">
+                  <legend>Choose a size</legend>
+                  <div class="choice-grid choice-grid-3">
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="radio"
+                        name="size"
+                        id="size-tall"
+                        value="tall"
+                      />
+                      <label class="choice-chip" for="size-tall">
+                        <strong>Tall</strong>
+                        <span>12 oz</span>
+                        <small>base price</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="radio"
+                        name="size"
+                        id="size-grande"
+                        value="grande"
+                        checked
+                      />
+                      <label class="choice-chip" for="size-grande">
+                        <strong>Grande</strong>
+                        <span>16 oz</span>
+                        <small>+ $0.80</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="radio"
+                        name="size"
+                        id="size-venti"
+                        value="venti"
+                      />
+                      <label class="choice-chip" for="size-venti">
+                        <strong>Venti</strong>
+                        <span>20 oz</span>
+                        <small>+ $1.55</small>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="form-grid">
+                  <label class="field">
+                    <span>Milk choice</span>
+                    <select id="milk" name="milk">
+                      <option value="whole">Whole milk</option>
+                      <option value="oat" selected>Oat milk + $0.60</option>
+                      <option value="almond">Almond milk + $0.65</option>
+                      <option value="coconut">Coconut milk + $0.70</option>
+                    </select>
+                  </label>
+                  <label class="field">
+                    <span>Temperature</span>
+                    <select id="temperature" name="temperature">
+                      <option value="iced" selected>Iced</option>
+                      <option value="hot">Hot</option>
+                      <option value="blended">Blended</option>
+                    </select>
+                  </label>
+                </div>
+
+                <fieldset class="option-group">
+                  <legend>Finish the drink</legend>
+                  <div class="choice-grid choice-grid-2">
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="checkbox"
+                        name="extras"
+                        id="extra-shot"
+                        value="extra-shot"
+                      />
+                      <label class="choice-chip addon-chip" for="extra-shot">
+                        <strong>Extra espresso shot</strong>
+                        <span>Sharper finish</span>
+                        <small>+ $1.20</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="checkbox"
+                        name="extras"
+                        id="sweet-foam"
+                        value="sweet-foam"
+                      />
+                      <label class="choice-chip addon-chip" for="sweet-foam">
+                        <strong>Vanilla sweet foam</strong>
+                        <span>Light and glossy</span>
+                        <small>+ $1.10</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="checkbox"
+                        name="extras"
+                        id="caramel-drizzle"
+                        value="caramel-drizzle"
+                      />
+                      <label class="choice-chip addon-chip" for="caramel-drizzle">
+                        <strong>Caramel drizzle</strong>
+                        <span>Golden finish</span>
+                        <small>+ $0.75</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="checkbox"
+                        name="extras"
+                        id="protein-foam"
+                        value="protein-foam"
+                      />
+                      <label class="choice-chip addon-chip" for="protein-foam">
+                        <strong>Protein soft top</strong>
+                        <span>Extra smooth</span>
+                        <small>+ $1.35</small>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="form-grid form-grid-tight">
+                  <div class="field quantity-field">
+                    <span>Quantity</span>
+                    <div class="stepper" aria-label="Order quantity">
+                      <button class="stepper-button" type="button" data-step="-1">-</button>
+                      <input
+                        id="quantity"
+                        name="quantity"
+                        type="number"
+                        min="1"
+                        max="6"
+                        step="1"
+                        value="1"
+                        inputmode="numeric"
+                      />
+                      <button class="stepper-button" type="button" data-step="1">+</button>
+                    </div>
+                  </div>
+
+                  <label class="field">
+                    <span>Pickup time</span>
+                    <select id="pickup-time" name="pickupTime">
+                      <option value="asap" selected>As soon as possible</option>
+                      <option value="10 min">In 10 minutes</option>
+                      <option value="20 min">In 20 minutes</option>
+                      <option value="30 min">In 30 minutes</option>
+                    </select>
+                  </label>
+                </div>
+
+                <fieldset class="option-group">
+                  <legend>Pickup mode</legend>
+                  <div class="choice-grid choice-grid-3">
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="radio"
+                        name="pickupMode"
+                        id="pickup-cafe"
+                        value="cafe"
+                        checked
+                      />
+                      <label class="choice-chip" for="pickup-cafe">
+                        <strong>Cafe counter</strong>
+                        <span>Walk in, grab fast</span>
+                        <small>standard service</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="radio"
+                        name="pickupMode"
+                        id="pickup-drive"
+                        value="drive"
+                      />
+                      <label class="choice-chip" for="pickup-drive">
+                        <strong>Drive-thru</strong>
+                        <span>Pickup from lane</span>
+                        <small>+ $0.35 service</small>
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        class="choice-input"
+                        type="radio"
+                        name="pickupMode"
+                        id="pickup-curb"
+                        value="curb"
+                      />
+                      <label class="choice-chip" for="pickup-curb">
+                        <strong>Curbside handoff</strong>
+                        <span>Park and collect</span>
+                        <small>+ $0.55 service</small>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="form-grid">
+                  <label class="field">
+                    <span>Name for cup</span>
+                    <input
+                      id="customer-name"
+                      name="customerName"
+                      type="text"
+                      placeholder="Avery"
+                      maxlength="32"
+                      required
+                    />
+                  </label>
+                  <label class="field">
+                    <span>Phone number</span>
+                    <input
+                      id="customer-phone"
+                      name="customerPhone"
+                      type="tel"
+                      placeholder="012-345-6789"
+                      minlength="8"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <label class="field field-wide">
+                  <span>Special note</span>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows="3"
+                    placeholder="Less ice, extra cinnamon, lid on the side..."
+                  ></textarea>
+                </label>
+
+                <div class="order-actions">
+                  <p class="form-hint">
+                    Update the drink, pickup mode, or quantity and the ticket
+                    will refresh immediately.
+                  </p>
+                  <button class="button button-primary order-submit" type="submit">
+                    Place order
+                  </button>
+                </div>
+
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+              </form>
+            </div>
+
+            <aside class="order-ticket reveal" aria-live="polite">
+              <div class="ticket-header">
+                <p class="ticket-label">Order summary</p>
+                <span id="summary-ready">Ready in 8-10 min</span>
+              </div>
+
+              <div class="ticket-drink">
+                <p id="summary-temperature">Iced signature drink</p>
+                <h3 id="summary-drink">Velvet Oat Shaken Espresso</h3>
+                <p id="summary-description">
+                  Blonde espresso, brown sugar, oat milk, and cinnamon.
+                </p>
+              </div>
+
+              <dl class="ticket-lines">
+                <div>
+                  <dt>Size</dt>
+                  <dd id="summary-size">Grande</dd>
+                </div>
+                <div>
+                  <dt>Milk</dt>
+                  <dd id="summary-milk">Oat milk</dd>
+                </div>
+                <div>
+                  <dt>Pickup</dt>
+                  <dd id="summary-pickup">Cafe counter</dd>
+                </div>
+                <div>
+                  <dt>Time</dt>
+                  <dd id="summary-time">As soon as possible</dd>
+                </div>
+                <div>
+                  <dt>Quantity</dt>
+                  <dd id="summary-quantity">1</dd>
+                </div>
+              </dl>
+
+              <div class="ticket-extras">
+                <p>Extras</p>
+                <ul id="summary-extras">
+                  <li>No extras selected</li>
+                </ul>
+              </div>
+
+              <div class="ticket-total">
+                <div>
+                  <span>Subtotal</span>
+                  <strong id="summary-subtotal">$7.80</strong>
+                </div>
+                <div>
+                  <span>Service fee</span>
+                  <strong id="summary-fee">$0.75</strong>
+                </div>
+                <div class="grand-total">
+                  <span>Total</span>
+                  <strong id="summary-total">$8.55</strong>
+                </div>
+              </div>
+
+              <div class="ticket-stars">
+                <span>Stars estimate</span>
+                <strong id="summary-stars">94</strong>
+              </div>
+
+              <button
+                class="button button-primary ticket-submit"
+                id="ticket-submit"
+                type="submit"
+                form="order-form"
+              >
+                Place order - $8.55
+              </button>
+
+              <div class="confirmation-card" id="confirmation-card" hidden>
+                <p class="eyebrow">Order confirmed</p>
+                <h3 id="confirmation-heading">Pickup request locked in.</h3>
+                <p id="confirmation-text">
+                  Your drink is in the queue and the barista has the final notes.
+                </p>
+                <div class="confirmation-meta">
+                  <span id="confirmation-number">Order #SBX-1842</span>
+                  <span id="confirmation-pickup">Ready in 8-10 min</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="pickup-section" id="pickup">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Pickup details</p>
+              <h2>Everything below the builder supports a smoother pickup handoff.</h2>
+            </div>
+
+            <div class="signal-grid">
+              <article class="signal-card reveal">
+                <span>01</span>
+                <h3>Clear modifier logic</h3>
+                <p>
+                  Milk, size, extras, and quantity all feed the summary so the
+                  final order stays readable.
+                </p>
+              </article>
+              <article class="signal-card reveal">
+                <span>02</span>
+                <h3>Pickup stays visible</h3>
+                <p>
+                  The ticket keeps timing and handoff details in view while the
+                  customer is making changes.
+                </p>
+              </article>
+              <article class="signal-card reveal">
+                <span>03</span>
+                <h3>Confirmation stays simple</h3>
+                <p>
+                  After submit, the page returns an order number and pickup
+                  status without extra marketing sections below it.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+          <div>
+            <h4>Order</h4>
+            <a href="#order">Build a drink</a>
+            <a href="#pickup">Pickup details</a>
+            <a href="#top">Back to top</a>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <a href="index.html">Return home</a>
+            <a href="index.html#menu">View menu</a>
+            <a href="#top">Store questions</a>
+          </div>
+          <div>
+            <h4>About</h4>
+            <a href="index.html">Homepage layout</a>
+            <a href="#top">Order flow</a>
+            <a href="#top">Reserve inspiration</a>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <p>Starbucks-inspired demo ordering interface with a simplified layout.</p>
+          <p>Built with HTML, CSS, and vanilla JavaScript.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
