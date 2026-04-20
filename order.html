@@ -422,91 +422,105 @@
               </form>
             </div>
 
-            <aside class="order-ticket reveal" aria-live="polite">
-              <div class="ticket-header">
-                <p class="ticket-label">Order summary</p>
-                <span id="summary-ready">Ready in 8-10 min</span>
-              </div>
+            <div class="order-rail">
+              <article class="photo-card photo-card-drink reveal">
+                <img
+                  src="assets/images/coffee-craft.jpg"
+                  alt="Fresh espresso and latte art served on a wooden surface."
+                />
+                <div class="photo-card-overlay">
+                  <span class="mini-panel-label">Crafted for pickup</span>
+                  <strong>Keep the drink in view while you tune the order details.</strong>
+                  <p>One polished coffee image adds warmth to the order rail without crowding the summary.</p>
+                </div>
+              </article>
 
-              <div class="ticket-drink">
-                <p id="summary-temperature">Iced signature drink</p>
-                <h3 id="summary-drink">Velvet Oat Shaken Espresso</h3>
-                <p id="summary-description">
-                  Blonde espresso, brown sugar, oat milk, and cinnamon.
-                </p>
-              </div>
+              <aside class="order-ticket reveal" aria-live="polite">
+                <div class="ticket-header">
+                  <p class="ticket-label">Order summary</p>
+                  <span id="summary-ready">Ready in 8-10 min</span>
+                </div>
 
-              <dl class="ticket-lines">
-                <div>
-                  <dt>Size</dt>
-                  <dd id="summary-size">Grande</dd>
+                <div class="ticket-drink">
+                  <p id="summary-temperature">Iced signature drink</p>
+                  <h3 id="summary-drink">Velvet Oat Shaken Espresso</h3>
+                  <p id="summary-description">
+                    Blonde espresso, brown sugar, oat milk, and cinnamon.
+                  </p>
                 </div>
-                <div>
-                  <dt>Milk</dt>
-                  <dd id="summary-milk">Oat milk</dd>
-                </div>
-                <div>
-                  <dt>Pickup</dt>
-                  <dd id="summary-pickup">Cafe counter</dd>
-                </div>
-                <div>
-                  <dt>Time</dt>
-                  <dd id="summary-time">As soon as possible</dd>
-                </div>
-                <div>
-                  <dt>Quantity</dt>
-                  <dd id="summary-quantity">1</dd>
-                </div>
-              </dl>
 
-              <div class="ticket-extras">
-                <p>Extras</p>
-                <ul id="summary-extras">
-                  <li>No extras selected</li>
-                </ul>
-              </div>
+                <dl class="ticket-lines">
+                  <div>
+                    <dt>Size</dt>
+                    <dd id="summary-size">Grande</dd>
+                  </div>
+                  <div>
+                    <dt>Milk</dt>
+                    <dd id="summary-milk">Oat milk</dd>
+                  </div>
+                  <div>
+                    <dt>Pickup</dt>
+                    <dd id="summary-pickup">Cafe counter</dd>
+                  </div>
+                  <div>
+                    <dt>Time</dt>
+                    <dd id="summary-time">As soon as possible</dd>
+                  </div>
+                  <div>
+                    <dt>Quantity</dt>
+                    <dd id="summary-quantity">1</dd>
+                  </div>
+                </dl>
 
-              <div class="ticket-total">
-                <div>
-                  <span>Subtotal</span>
-                  <strong id="summary-subtotal">$7.80</strong>
+                <div class="ticket-extras">
+                  <p>Extras</p>
+                  <ul id="summary-extras">
+                    <li>No extras selected</li>
+                  </ul>
                 </div>
-                <div>
-                  <span>Service fee</span>
-                  <strong id="summary-fee">$0.75</strong>
-                </div>
-                <div class="grand-total">
-                  <span>Total</span>
-                  <strong id="summary-total">$8.55</strong>
-                </div>
-              </div>
 
-              <div class="ticket-stars">
-                <span>Stars estimate</span>
-                <strong id="summary-stars">94</strong>
-              </div>
-
-              <button
-                class="button button-primary ticket-submit"
-                id="ticket-submit"
-                type="submit"
-                form="order-form"
-              >
-                Place order - $8.55
-              </button>
-
-              <div class="confirmation-card" id="confirmation-card" hidden>
-                <p class="eyebrow">Order confirmed</p>
-                <h3 id="confirmation-heading">Pickup request locked in.</h3>
-                <p id="confirmation-text">
-                  Your drink is in the queue and the barista has the final notes.
-                </p>
-                <div class="confirmation-meta">
-                  <span id="confirmation-number">Order #SBX-1842</span>
-                  <span id="confirmation-pickup">Ready in 8-10 min</span>
+                <div class="ticket-total">
+                  <div>
+                    <span>Subtotal</span>
+                    <strong id="summary-subtotal">$7.80</strong>
+                  </div>
+                  <div>
+                    <span>Service fee</span>
+                    <strong id="summary-fee">$0.75</strong>
+                  </div>
+                  <div class="grand-total">
+                    <span>Total</span>
+                    <strong id="summary-total">$8.55</strong>
+                  </div>
                 </div>
-              </div>
-            </aside>
+
+                <div class="ticket-stars">
+                  <span>Stars estimate</span>
+                  <strong id="summary-stars">94</strong>
+                </div>
+
+                <button
+                  class="button button-primary ticket-submit"
+                  id="ticket-submit"
+                  type="submit"
+                  form="order-form"
+                >
+                  Place order - $8.55
+                </button>
+
+                <div class="confirmation-card" id="confirmation-card" hidden>
+                  <p class="eyebrow">Order confirmed</p>
+                  <h3 id="confirmation-heading">Pickup request locked in.</h3>
+                  <p id="confirmation-text">
+                    Your drink is in the queue and the barista has the final notes.
+                  </p>
+                  <div class="confirmation-meta">
+                    <span id="confirmation-number">Order #SBX-1842</span>
+                    <span id="confirmation-pickup">Ready in 8-10 min</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
           </div>
         </section>
 
